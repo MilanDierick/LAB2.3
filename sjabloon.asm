@@ -30,7 +30,7 @@ BSR_TEMP_HI		RES 1
 
 ;Declaratie van variabelen in acces-bank
 	UDATA_ACS
-
+keuze	RES 1
 
 ;*************************************************************************
 ;
@@ -81,13 +81,27 @@ Main:
 configIO:
     bcf TRISD, RD3
     bsf TRISB, RB4
+    ;Zet RB4 als digitale ingang.
 
-frequentie1Hz:
+frequentie:
     btg PORTD,RD3
+    
+    ;switch case in assembler
+    movf      SWITCH, w
+    xorlw     1
+    btfsc     STATUS, Z                ; If SWITCH = CASE1, jump to LABEL1
+    goto      LABEL1
+    xorlw     2^1
+    btfsc     STATUS, Z                ; If SWITCH = CASE2, jump to LABEL2
+    goto      LABEL2
+    xorlw     3^2
+    btfsc     STATUS, Z                ; If SWITCH = CASE3, jump to LABEL3
+    goto      LABEL3
+    
     ;call Delay1s
     btfss PORTB,RB4
-    MOVF 2, W
-    btfss PORTB,RB4
+    MOVF 2, WREG
+    ;btfss PORTB,RB4
     bra releaseBtn
     bra frequentie1Hz
     
@@ -97,11 +111,15 @@ releaseBtn:
     bra releaseBtn
 
 waitForBtnUp:
-    ;call Delay50ms
+    call Delay50ms
     call TABLE
+    movwf keuze
     
-TABLE ADDWF PCL
     bra frequentie1Hz
+    
+ORG 0x1000h
+TABLE ADDWF PCL
+    RETLW 22
     bra frequentie10Hz
     bra frequentie100Hz
     bra frequentie1kHz
