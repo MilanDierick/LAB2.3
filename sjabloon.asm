@@ -15,7 +15,7 @@
 
 ;Definieer externe, globale en locale labels
 
-	EXTERN Delay1s,Delay50ms,Delay20ms
+	EXTERN Delay1s,Delay50ms,Delay20ms,Delay100ms,Delay10ms,Delay1ms
 	;GLOBAL
 	;LOCAL
 
@@ -30,7 +30,7 @@ BSR_TEMP_HI		RES 1
 
 ;Declaratie van variabelen in acces-bank
 	UDATA_ACS
-keuze	RES 1
+choice RES 1 
 
 ;*************************************************************************
 ;
@@ -81,49 +81,40 @@ Main:
 configIO:
     bcf TRISD, RD3
     bsf TRISB, RB4
-    ;Zet RB4 als digitale ingang.
 
 frequentie:
     btg PORTD,RD3
-    
-    ;switch case in assembler
-    movf      SWITCH, w
-    xorlw     1
-    btfsc     STATUS, Z                ; If SWITCH = CASE1, jump to LABEL1
-    goto      LABEL1
-    xorlw     2^1
-    btfsc     STATUS, Z                ; If SWITCH = CASE2, jump to LABEL2
-    goto      LABEL2
-    xorlw     3^2
-    btfsc     STATUS, Z                ; If SWITCH = CASE3, jump to LABEL3
-    goto      LABEL3
-    
-    ;call Delay1s
+    bra processChoice
     btfss PORTB,RB4
-    MOVF 2, WREG
-    ;btfss PORTB,RB4
     bra releaseBtn
-    bra frequentie1Hz
+    bra frequentie
     
 releaseBtn:
-    ;btfsc PORTB, RB4
+    btfsc PORTB, RB4
     bra waitForBtnUp
     bra releaseBtn
 
 waitForBtnUp:
     call Delay50ms
-    call TABLE
-    movwf keuze
+    incf W
+    cpfsgt 4
+    bra resetFrequentie
+    bra frequentie
     
-    bra frequentie1Hz
+processChoice:
+    xorlw 0
+    bnz Delay1s                ; If SWITCH = CASE1, jump to LABEL1
+    xorlw 1
+    bnz Delay100ms               ; If SWITCH = CASE2, jump to LABEL2
+    xorlw 2
+    bnz Delay10ms               ; If SWITCH = CASE3, jump to LABEL3
+    xorlw 3
+    bnz Delay1ms                ; If SWITCH = CASE3, jump to LABEL3
+    bra frequentie
     
-ORG 0x1000h
-TABLE ADDWF PCL
-    RETLW 22
-    bra frequentie10Hz
-    bra frequentie100Hz
-    bra frequentie1kHz
-    
+resetFrequentie:
+    movlw 0d
+    bra frequentie
 ;*************************************************************************
 ;
 ;High priority interrupt. 
