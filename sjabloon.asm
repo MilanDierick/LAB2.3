@@ -85,6 +85,7 @@ configIO:
 frequentie:
     btg PORTD,RD3
     bra processChoice
+continueAfterChoice:
     btfss PORTB,RB4
     bra releaseBtn
     bra frequentie
@@ -102,19 +103,35 @@ waitForBtnUp:
     bra frequentie
     
 processChoice:
-    xorlw 0
-    bnz Delay1s                ; If SWITCH = CASE1, jump to LABEL1
-    xorlw 1
-    bnz Delay100ms               ; If SWITCH = CASE2, jump to LABEL2
-    xorlw 2
-    bnz Delay10ms               ; If SWITCH = CASE3, jump to LABEL3
-    xorlw 3
-    bnz Delay1ms                ; If SWITCH = CASE3, jump to LABEL3
+    xorlw 0d
+    bnz startDelay1s
+    xorlw 1d
+    bnz startDelay100ms
+    xorlw 2d
+    bnz startDelay10ms
+    xorlw 3d
+    bnz startDelay1ms
     bra frequentie
     
 resetFrequentie:
     movlw 0d
     bra frequentie
+    
+startDelay1s:
+    call Delay1s
+    bra continueAfterChoice
+    
+startDelay100ms
+    call Delay100ms
+    bra continueAfterChoice
+    
+startDelay10ms
+    call Delay10ms
+    bra continueAfterChoice
+    
+startDelay1ms
+    call Delay1ms
+    bra continueAfterChoice
 ;*************************************************************************
 ;
 ;High priority interrupt. 
