@@ -1,0 +1,5 @@
+Warning[207] C:\DEV\ASSEMBLER PROJECTS\LAB2.3.X\SJABLOON.ASM 107 : Found label after column 1. (xorlw 0d)
+Warning[207] C:\DEV\ASSEMBLER PROJECTS\LAB2.3.X\SJABLOON.ASM 108 : Found label after column 1. (bnz startDelay1s)
+Warning[207] C:\DEV\ASSEMBLER PROJECTS\LAB2.3.X\SJABLOON.ASM 109 : Found label after column 1. (xorlw 1d)
+Warning[207] C:\DEV\ASSEMBLER PROJECTS\LAB2.3.X\SJABLOON.ASM 111 : Found label after column 1. (xorlw 2d)
+Warning[205] C:\DEV\ASSEMBLER PROJECTS\LAB2.3.X\SJABLOON.ASM 178 : Found directive in column 1. (end)

@@ -1,0 +1,152 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Wed Apr 25 10:59:16 2018
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000004
+                   .org_1       code   0x000008    program   0x000004
+                   .org_2       code   0x000018    program   0x000004
+                     RSET       code   0x000800    program   0x000004
+                   .cinit    romdata   0x000804    program   0x000002
+                   HP_INT       code   0x000808    program   0x000004
+                   LP_INT       code   0x000818    program   0x000004
+                    .code       code   0x00081c    program   0x000098
+                Programma       code   0x0008b4    program   0x000072
+               .udata_acs      udata   0x000000       data   0x000004
+                   .udata      udata   0x000060       data   0x000006
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000003      
+                            0x000008    0x00000b      
+                            0x000018    0x00001b      
+                            0x000800    0x000805      
+                            0x000808    0x00080b      
+                            0x000818    0x000925      
+            292 out of 33048 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+               Delay100ms   0x00086a    program     extern C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+             Delay100ms_0   0x000876    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                Delay10ms   0x000886    program     extern C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+              Delay10ms_0   0x00088e    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                 Delay1ms   0x00089e    program     extern C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+               Delay1ms_0   0x0008a6    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                  Delay1s   0x00081c    program     extern C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                Delay20ms   0x00083a    program     extern C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+              Delay20ms_0   0x000842    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                Delay50ms   0x000850    program     extern C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+              Delay50ms_0   0x00085c    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                  Delay_0   0x000828    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                  HighINT   0x0008fa    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+                   LowINT   0x000910    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+                     Main   0x0008b4    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+         bnz startDelay1s   0x0008d4    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+                 configIO   0x0008b4    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+      continueAfterChoice   0x0008be    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+               frequentie   0x0008b8    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+                       j1   0x00082e    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                      j10   0x000884    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                      j11   0x000894    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                      j12   0x00089a    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                      j13   0x0008ac    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                      j14   0x0008b0    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                       j2   0x000832    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                       j3   0x000836    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                       j4   0x000848    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                       j5   0x00084c    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                       j6   0x000862    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                       j7   0x000866    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                       j8   0x00087c    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                       j9   0x000880    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+            processChoice   0x0008d4    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+               releaseBtn   0x0008c4    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+          resetFrequentie   0x0008de    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+          startDelay100ms   0x0008e8    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+           startDelay10ms   0x0008ee    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+            startDelay1ms   0x0008f4    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+             startDelay1s   0x0008e2    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+             waitForBtnUp   0x0008c8    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+                 xorlw 0d   0x0008d4    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+                 xorlw 1d   0x0008d4    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+                 xorlw 2d   0x0008d6    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+              BSR_TEMP_HI   0x000065       data     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+              BSR_TEMP_LO   0x000062       data     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+           STATUS_TEMP_HI   0x000064       data     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+           STATUS_TEMP_LO   0x000061       data     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+             WREG_TEMP_HI   0x000063       data     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+             WREG_TEMP_LO   0x000060       data     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+                   choice   0x000003       data     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+                       d1   0x000000       data     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                       d2   0x000001       data     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                       d3   0x000002       data     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  Delay1s   0x00081c    program     extern C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                  Delay_0   0x000828    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                       j1   0x00082e    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                       j2   0x000832    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                       j3   0x000836    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                Delay20ms   0x00083a    program     extern C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+              Delay20ms_0   0x000842    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                       j4   0x000848    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                       j5   0x00084c    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                Delay50ms   0x000850    program     extern C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+              Delay50ms_0   0x00085c    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                       j6   0x000862    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                       j7   0x000866    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+               Delay100ms   0x00086a    program     extern C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+             Delay100ms_0   0x000876    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                       j8   0x00087c    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                       j9   0x000880    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                      j10   0x000884    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                Delay10ms   0x000886    program     extern C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+              Delay10ms_0   0x00088e    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                      j11   0x000894    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                      j12   0x00089a    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                 Delay1ms   0x00089e    program     extern C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+               Delay1ms_0   0x0008a6    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                      j13   0x0008ac    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                      j14   0x0008b0    program     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                 configIO   0x0008b4    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+                     Main   0x0008b4    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+               frequentie   0x0008b8    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+      continueAfterChoice   0x0008be    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+               releaseBtn   0x0008c4    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+             waitForBtnUp   0x0008c8    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+                 xorlw 1d   0x0008d4    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+                 xorlw 0d   0x0008d4    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+            processChoice   0x0008d4    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+         bnz startDelay1s   0x0008d4    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+                 xorlw 2d   0x0008d6    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+          resetFrequentie   0x0008de    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+             startDelay1s   0x0008e2    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+          startDelay100ms   0x0008e8    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+           startDelay10ms   0x0008ee    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+            startDelay1ms   0x0008f4    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+                  HighINT   0x0008fa    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+                   LowINT   0x000910    program     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+                       d1   0x000000       data     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                       d2   0x000001       data     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                       d3   0x000002       data     static C:\dev\Assembler Projects\LAB2.3.X\delay.asm
+                   choice   0x000003       data     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+             WREG_TEMP_LO   0x000060       data     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+           STATUS_TEMP_LO   0x000061       data     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+              BSR_TEMP_LO   0x000062       data     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+             WREG_TEMP_HI   0x000063       data     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+           STATUS_TEMP_HI   0x000064       data     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+              BSR_TEMP_HI   0x000065       data     static C:\dev\Assembler Projects\LAB2.3.X\sjabloon.asm
+
+
