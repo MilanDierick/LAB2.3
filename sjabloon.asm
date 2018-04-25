@@ -83,16 +83,17 @@ configIO:
     bsf TRISB, RB4
 
 frequentie:
+    movlw 0d
     btg PORTD,RD3
     bra processChoice
+    
 continueAfterChoice:
     btfss PORTB,RB4
     bra releaseBtn
     bra frequentie
     
 releaseBtn:
-    btfsc PORTB, RB4
-    bra waitForBtnUp
+    btfss PORTB, RB4
     bra releaseBtn
 
 waitForBtnUp:
@@ -103,6 +104,7 @@ waitForBtnUp:
     bra frequentie
     
 processChoice:
+    bcf PORTD, RD3
     xorlw 0d
     bnz startDelay1s
     xorlw 1d
@@ -121,15 +123,15 @@ startDelay1s:
     call Delay1s
     bra continueAfterChoice
     
-startDelay100ms
+startDelay100ms:
     call Delay100ms
     bra continueAfterChoice
     
-startDelay10ms
+startDelay10ms:
     call Delay10ms
     bra continueAfterChoice
     
-startDelay1ms
+startDelay1ms:
     call Delay1ms
     bra continueAfterChoice
 ;*************************************************************************
